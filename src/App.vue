@@ -19,7 +19,7 @@
                   </div>
                   <nav id="main-header-navbar" role="navigation" class="collapse navbar-collapse navbar">
                       <ul class="navigation-menu-items initialized">
-                          <li ><a href="" class="collapsed">продукты</a>
+                          <li ><a href="" class="collapsed">{{msgProducts}}</a>
                           </li>
                           <li ><a href="" class="collapsed">работа в России</a>
                           </li>
@@ -31,70 +31,71 @@
                       </ul>
                   </nav>
               </div>
-              <div class="main-navigation-search">
-                  <div class="container">
-                      <form name="search_form_SearchBox" method="get" action="https://www.wiley.com/en-gb/search">
-                          <div class="input-group">
-                              <input type="search" id="js-site-search-input" aria-label="site search" class="form-control main-navigation-search-input js-site-search-input ui-autocomplete-input" name="pq" value="" maxlength="100" placeholder="Enter your search by Title, Author, Keyword or ISBN" data-options="{&quot;autocompleteUrl&quot; : &quot;/en-gb/search/autocomplete/SearchBox&quot;,&quot;minCharactersBeforeRequest&quot; : &quot;3&quot;,&quot;waitTimeBeforeRequest&quot; : &quot;500&quot;,&quot;displayProductImages&quot; : false}" autocomplete="off">
-                              <span class="input-group-btn">
-                            <button type="submit" class="glyphicon glyphicon-search">Search</button>
-                        </span>
-                          </div>
-                          <ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;">
+              <app-search></app-search>
+              <!--<div class="main-navigation-search">-->
+                  <!--<div class="container">-->
+                      <!--<form name="search_form_SearchBox" method="get" action="https://www.wiley.com/en-gb/search">-->
+                          <!--<div class="input-group">-->
+                              <!--<input type="search" id="js-site-search-input" aria-label="site search" class="form-control main-navigation-search-input js-site-search-input ui-autocomplete-input" name="pq" value="" maxlength="100" placeholder="Enter your search by Title, Author, Keyword or ISBN" data-options="{&quot;autocompleteUrl&quot; : &quot;/en-gb/search/autocomplete/SearchBox&quot;,&quot;minCharactersBeforeRequest&quot; : &quot;3&quot;,&quot;waitTimeBeforeRequest&quot; : &quot;500&quot;,&quot;displayProductImages&quot; : false}" autocomplete="off">-->
+                              <!--<span class="input-group-btn">-->
+                            <!--<button type="submit" class="glyphicon glyphicon-search">Search</button>-->
+                        <!--</span>-->
+                          <!--</div>-->
+                          <!--<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;">-->
 
-                          </ul>
-                          <aside class="ui-autocomplete ui-front main-navigation-search-autocomplete ui-menu ui-widget ui-widget-content ps-container ps-theme-default" style="display: none" id="ui-id-2" tabindex="0" data-ps-id="506d6d1e-4eac-cdf4-7628-5fb431da0d50">
-                              <section class="searchresults-section search-related-content suggestions">
-                                  <h3>Suggestions</h3>
-                                  <div class="search-list"></div>
-                              </section>
-                              <section class="searchresults-section related-content-products-section">
-                                  <h3>Products</h3>
-                                  <div class="related-content-products"></div>
-                                  <span class="link-view-more-products ui-menu-item">
-                                <a class="all-results-link link-corner-products ui-menu-item-wrapper" id="ui-id-3" tabindex="-1">See all results</a>
-                            </span>
-                              </section>
-                              <section class="searchresults-section related-content-other-section">
-                                  <h3>Other</h3>
-                                  <div class="related-content-other"></div>
-                                  <span class="link-view-more-other ui-menu-item">
-                                <a class="all-results-link link-corner-other ui-menu-item-wrapper" id="ui-id-4" tabindex="-1">See all results</a>
-                            </span>
-                              </section>
-                              <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;">
+                          <!--</ul>-->
+                          <!--&lt;!&ndash;<aside class="ui-autocomplete ui-front main-navigation-search-autocomplete ui-menu ui-widget ui-widget-content ps-container ps-theme-default" style="display: none" id="ui-id-2" tabindex="0" data-ps-id="506d6d1e-4eac-cdf4-7628-5fb431da0d50">&ndash;&gt;-->
+                              <!--&lt;!&ndash;<section class="searchresults-section search-related-content suggestions">&ndash;&gt;-->
+                                  <!--&lt;!&ndash;<h3>Suggestions</h3>&ndash;&gt;-->
+                                  <!--&lt;!&ndash;<div class="search-list"></div>&ndash;&gt;-->
+                              <!--&lt;!&ndash;</section>&ndash;&gt;-->
+                              <!--&lt;!&ndash;<section class="searchresults-section related-content-products-section">&ndash;&gt;-->
+                                  <!--&lt;!&ndash;<h3>Products</h3>&ndash;&gt;-->
+                                  <!--&lt;!&ndash;<div class="related-content-products"></div>&ndash;&gt;-->
+                                  <!--&lt;!&ndash;<span class="link-view-more-products ui-menu-item">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<a class="all-results-link link-corner-products ui-menu-item-wrapper" id="ui-id-3" tabindex="-1">See all results</a>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                              <!--&lt;!&ndash;</section>&ndash;&gt;-->
+                              <!--&lt;!&ndash;<section class="searchresults-section related-content-other-section">&ndash;&gt;-->
+                                  <!--&lt;!&ndash;<h3>Other</h3>&ndash;&gt;-->
+                                  <!--&lt;!&ndash;<div class="related-content-other"></div>&ndash;&gt;-->
+                                  <!--&lt;!&ndash;<span class="link-view-more-other ui-menu-item">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<a class="all-results-link link-corner-other ui-menu-item-wrapper" id="ui-id-4" tabindex="-1">See all results</a>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                              <!--&lt;!&ndash;</section>&ndash;&gt;-->
+                              <!--&lt;!&ndash;<div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;">&ndash;&gt;-->
 
-                              </div>
-                              </div>
-                              <div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px;">
-                                  <div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;">
+                              <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                              <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                              <!--&lt;!&ndash;<div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px;">&ndash;&gt;-->
+                                  <!--&lt;!&ndash;<div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;">&ndash;&gt;-->
 
-                                  </div>
-                              </div>
-                          </aside>
-                      </form>
-                      <aside class="main-navigation-search-autocomplete-template" style="display: none">
-                          <section class="searchresults-section search-related-content suggestions">
-                              <h3>Suggestions</h3>
-                              <div class="search-list"></div>
-                          </section>
-                          <section class="searchresults-section related-content-products-section">
-                              <h3>Products</h3>
-                              <div class="related-content-products"></div>
-                              <span class="link-view-more-products">
-                                <a class="all-results-link link-corner-products">See all results</a>
-                            </span>
-                          </section>
-                          <section class="searchresults-section related-content-other-section">
-                              <h3>Other</h3>
-                              <div class="related-content-other"></div>
-                              <span class="link-view-more-other">
-                                <a class="all-results-link link-corner-other">See all results</a>
-                            </span>
-                          </section>
-                      </aside>
-                  </div>
-              </div>
+                                  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                              <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                          <!--&lt;!&ndash;</aside>&ndash;&gt;-->
+                      <!--</form>-->
+                      <!--&lt;!&ndash;<aside class="main-navigation-search-autocomplete-template" style="display: none">&ndash;&gt;-->
+                          <!--&lt;!&ndash;<section class="searchresults-section search-related-content suggestions">&ndash;&gt;-->
+                              <!--&lt;!&ndash;<h3>Suggestions</h3>&ndash;&gt;-->
+                              <!--&lt;!&ndash;<div class="search-list"></div>&ndash;&gt;-->
+                          <!--&lt;!&ndash;</section>&ndash;&gt;-->
+                          <!--&lt;!&ndash;<section class="searchresults-section related-content-products-section">&ndash;&gt;-->
+                              <!--&lt;!&ndash;<h3>Products</h3>&ndash;&gt;-->
+                              <!--&lt;!&ndash;<div class="related-content-products"></div>&ndash;&gt;-->
+                              <!--&lt;!&ndash;<span class="link-view-more-products">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<a class="all-results-link link-corner-products">See all results</a>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                          <!--&lt;!&ndash;</section>&ndash;&gt;-->
+                          <!--&lt;!&ndash;<section class="searchresults-section related-content-other-section">&ndash;&gt;-->
+                              <!--&lt;!&ndash;<h3>Other</h3>&ndash;&gt;-->
+                              <!--&lt;!&ndash;<div class="related-content-other"></div>&ndash;&gt;-->
+                              <!--&lt;!&ndash;<span class="link-view-more-other">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<a class="all-results-link link-corner-other">See all results</a>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                          <!--&lt;!&ndash;</section>&ndash;&gt;-->
+                      <!--&lt;!&ndash;</aside>&ndash;&gt;-->
+                  <!--</div>-->
+              <!--</div>-->
           </div>
 
       </header>
@@ -108,14 +109,21 @@
 </template>
 
 <script>
+import search from "./components/search.vue"
+
 export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msgProducts: "продукты"
     }
-  }
+  },
+    components: {
+        appSearch: search
+    }
 }
+
+
 </script>
 
 <style>
