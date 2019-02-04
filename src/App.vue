@@ -1,107 +1,7 @@
 <template>
   <div id="app">
-      <header id="main-header-container" class="main-header-container">
-          <div class="main-sticky-header affix-top">
-              <div class="main-header-navigation">
-                  <div class="main-navigation-mobile-header">
-                      <div class="yCmsContentSlot logo">
-                          <div class="simple-responsive-banner-component">
-                              <a href="https://www.wiley.com/en-gb/">
-                                  <img class="js-responsive-image" alt="Wiley" title="Wiley" style="" src="./assets/b2c-site-logo_desktop_optimized.png">
-                              </a>
-                          </div>
-                      </div>
-                          <span type="button" class="navbar-toggle collapsed visible-xs-inline-block">
-                             <span class="patty"></span>
-                          </span>
-                          <span class="main-navigation-search-icon icon-search-black visible-xs-inline-block"></span>
 
-                  </div>
-                  <nav id="main-header-navbar" role="navigation" class="collapse navbar-collapse navbar">
-                      <ul class="navigation-menu-items initialized">
-                          <li ><a href="" class="collapsed">{{msgProducts}}</a>
-                          </li>
-                          <li ><a href="" class="collapsed">работа в России</a>
-                          </li>
-                          <li ><a href="" class="collapsed">о компании</a>
-                          </li>
-                          <li ><a href="" class="collapsed">связаться с нами</a>
-                          </li>
-
-                      </ul>
-                  </nav>
-              </div>
-              <app-search></app-search>
-              <!--<div class="main-navigation-search">-->
-                  <!--<div class="container">-->
-                      <!--<form name="search_form_SearchBox" method="get" action="https://www.wiley.com/en-gb/search">-->
-                          <!--<div class="input-group">-->
-                              <!--<input type="search" id="js-site-search-input" aria-label="site search" class="form-control main-navigation-search-input js-site-search-input ui-autocomplete-input" name="pq" value="" maxlength="100" placeholder="Enter your search by Title, Author, Keyword or ISBN" data-options="{&quot;autocompleteUrl&quot; : &quot;/en-gb/search/autocomplete/SearchBox&quot;,&quot;minCharactersBeforeRequest&quot; : &quot;3&quot;,&quot;waitTimeBeforeRequest&quot; : &quot;500&quot;,&quot;displayProductImages&quot; : false}" autocomplete="off">-->
-                              <!--<span class="input-group-btn">-->
-                            <!--<button type="submit" class="glyphicon glyphicon-search">Search</button>-->
-                        <!--</span>-->
-                          <!--</div>-->
-                          <!--<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;">-->
-
-                          <!--</ul>-->
-                          <!--&lt;!&ndash;<aside class="ui-autocomplete ui-front main-navigation-search-autocomplete ui-menu ui-widget ui-widget-content ps-container ps-theme-default" style="display: none" id="ui-id-2" tabindex="0" data-ps-id="506d6d1e-4eac-cdf4-7628-5fb431da0d50">&ndash;&gt;-->
-                              <!--&lt;!&ndash;<section class="searchresults-section search-related-content suggestions">&ndash;&gt;-->
-                                  <!--&lt;!&ndash;<h3>Suggestions</h3>&ndash;&gt;-->
-                                  <!--&lt;!&ndash;<div class="search-list"></div>&ndash;&gt;-->
-                              <!--&lt;!&ndash;</section>&ndash;&gt;-->
-                              <!--&lt;!&ndash;<section class="searchresults-section related-content-products-section">&ndash;&gt;-->
-                                  <!--&lt;!&ndash;<h3>Products</h3>&ndash;&gt;-->
-                                  <!--&lt;!&ndash;<div class="related-content-products"></div>&ndash;&gt;-->
-                                  <!--&lt;!&ndash;<span class="link-view-more-products ui-menu-item">&ndash;&gt;-->
-                                <!--&lt;!&ndash;<a class="all-results-link link-corner-products ui-menu-item-wrapper" id="ui-id-3" tabindex="-1">See all results</a>&ndash;&gt;-->
-                            <!--&lt;!&ndash;</span>&ndash;&gt;-->
-                              <!--&lt;!&ndash;</section>&ndash;&gt;-->
-                              <!--&lt;!&ndash;<section class="searchresults-section related-content-other-section">&ndash;&gt;-->
-                                  <!--&lt;!&ndash;<h3>Other</h3>&ndash;&gt;-->
-                                  <!--&lt;!&ndash;<div class="related-content-other"></div>&ndash;&gt;-->
-                                  <!--&lt;!&ndash;<span class="link-view-more-other ui-menu-item">&ndash;&gt;-->
-                                <!--&lt;!&ndash;<a class="all-results-link link-corner-other ui-menu-item-wrapper" id="ui-id-4" tabindex="-1">See all results</a>&ndash;&gt;-->
-                            <!--&lt;!&ndash;</span>&ndash;&gt;-->
-                              <!--&lt;!&ndash;</section>&ndash;&gt;-->
-                              <!--&lt;!&ndash;<div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;">&ndash;&gt;-->
-
-                              <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                              <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                              <!--&lt;!&ndash;<div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px;">&ndash;&gt;-->
-                                  <!--&lt;!&ndash;<div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;">&ndash;&gt;-->
-
-                                  <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                              <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                          <!--&lt;!&ndash;</aside>&ndash;&gt;-->
-                      <!--</form>-->
-                      <!--&lt;!&ndash;<aside class="main-navigation-search-autocomplete-template" style="display: none">&ndash;&gt;-->
-                          <!--&lt;!&ndash;<section class="searchresults-section search-related-content suggestions">&ndash;&gt;-->
-                              <!--&lt;!&ndash;<h3>Suggestions</h3>&ndash;&gt;-->
-                              <!--&lt;!&ndash;<div class="search-list"></div>&ndash;&gt;-->
-                          <!--&lt;!&ndash;</section>&ndash;&gt;-->
-                          <!--&lt;!&ndash;<section class="searchresults-section related-content-products-section">&ndash;&gt;-->
-                              <!--&lt;!&ndash;<h3>Products</h3>&ndash;&gt;-->
-                              <!--&lt;!&ndash;<div class="related-content-products"></div>&ndash;&gt;-->
-                              <!--&lt;!&ndash;<span class="link-view-more-products">&ndash;&gt;-->
-                                <!--&lt;!&ndash;<a class="all-results-link link-corner-products">See all results</a>&ndash;&gt;-->
-                            <!--&lt;!&ndash;</span>&ndash;&gt;-->
-                          <!--&lt;!&ndash;</section>&ndash;&gt;-->
-                          <!--&lt;!&ndash;<section class="searchresults-section related-content-other-section">&ndash;&gt;-->
-                              <!--&lt;!&ndash;<h3>Other</h3>&ndash;&gt;-->
-                              <!--&lt;!&ndash;<div class="related-content-other"></div>&ndash;&gt;-->
-                              <!--&lt;!&ndash;<span class="link-view-more-other">&ndash;&gt;-->
-                                <!--&lt;!&ndash;<a class="all-results-link link-corner-other">See all results</a>&ndash;&gt;-->
-                            <!--&lt;!&ndash;</span>&ndash;&gt;-->
-                          <!--&lt;!&ndash;</section>&ndash;&gt;-->
-                      <!--&lt;!&ndash;</aside>&ndash;&gt;-->
-                  <!--</div>-->
-              <!--</div>-->
-          </div>
-
-      </header>
-    <!--<img src="./assets/logo.png">-->
-    <!--<h1>{{ msg }}</h1>-->
-
+      <app-header></app-header>
 
   </div>
 
@@ -109,17 +9,19 @@
 </template>
 
 <script>
-import search from "./components/search.vue"
+import wileyHeader from "./components/wileyHeader.vue"
+
 
 export default {
   name: 'app',
   data () {
     return {
-      msgProducts: "продукты"
+
     }
   },
     components: {
-        appSearch: search
+        appHeader: wileyHeader
+
     }
 }
 
@@ -135,7 +37,35 @@ export default {
   color: #2c3e50;
   margin-top: 0px;
 }
+html {
+    font-size: 62.5%;
+    min-height: 100% !important;
+    height: 100%;
+}
 
+html.has-drawer {
+    overflow: hidden;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+}
+
+body {
+    background: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: inherit;
+    line-height: 1.4;
+    color: #000000;
+    overflow-x: auto;
+    min-height: 100%;
+}
+
+body.has-drawer {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
 
 .input-group {
     position: relative;
@@ -1491,7 +1421,62 @@ main {
     .navigation-menu-items > li:focus > a {
         color: #009ca9;
     }
+    dropdown-menu {
+        font-family: 'Open Sans', sans-serif;
+        border: none;
+        position: absolute;
+        z-index: -1;
+        float: none;
+        top: 100%;
+        max-width: 1240px;
+        min-width: 900px;
+        max-height: 80vh;
+        overflow: hidden;
+        box-sizing: border-box;
+        -webkit-overflow-scrolling: touch;
+        left: 0;
+        padding-top: 0;
+        right: 0;
+        margin: auto;
+        display: none;
+        background-color: #ffffff;
+    }
 
+    .dropdown-menu.collapse.in {
+        display: block;
+        z-index: 1;
+        right: auto;
+    }
+
+    .dropdown-menu .dropdown-item-title {
+        display: none;
+    }
+
+    .dropdown-menu .toggle-dropdown {
+        left: 0;
+        position: relative;
+        top: 0;
+        bottom: 0;
+        width: 30px;
+        height: 20px;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .dropdown-menu .toggle-dropdown:after {
+        position: absolute;
+        width: 0;
+        content: '';
+        height: 0;
+        top: 13px;
+        right: 20px;
+        border: solid #c2c3c6;
+        border-width: 0 1px 1px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+    }
 }
 @media (max-width: 846px) {
     .navigation-menu-items {
