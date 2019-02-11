@@ -11,7 +11,7 @@
                         </div>
                     </div>
                     <span type="button" id="openMenu" @click="menuClick" class="navbar_toggle collapsed visible-xs-inline-block">
-                             <!--<span class="patty"></span>-->
+                             <span class="patty"></span>
                           </span>
                     <span class="main-navigation-search-icon icon-search-black visible-xs-inline-block"></span>
 
