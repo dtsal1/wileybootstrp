@@ -10,14 +10,14 @@
                             </a>
                         </div>
                     </div>
-                    <span type="button" class="navbar-toggle collapsed visible-xs-inline-block">
-                             <span class="patty"></span>
+                    <span type="button" id="openMenu" @click="menuClick" class="navbar_toggle collapsed visible-xs-inline-block">
+                             <!--<span class="patty"></span>-->
                           </span>
                     <span class="main-navigation-search-icon icon-search-black visible-xs-inline-block"></span>
 
                 </div>
                 <nav id="main-header-navbar" role="navigation" class="collapse navbar-collapse navbar">
-                    <ul class="navigation-menu">
+                    <ul id="navigation-menu" class="navigation-menu">
                         <li class=""><a href="" class="">{{msgProducts}}</a>
                         </li>
                         <li class=""><a href="" class="">{{msgWork}}</a>
@@ -49,11 +49,43 @@
         },
         components: {
             appSearch: search
+        },
+        methods:{
+            menuClick (e) {
+                e.preventDefault();
+
+            }
+
         }
+
+
     }
 </script>
 
 <style scoped>
+
+    @font-face {
+        font-family: 'Material Icons';
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/materialicons/v43/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+    }
+
+    .material-icons {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+    }
     @media (min-width: 641px) {
         .main-header-container .simple-responsive-banner-component {
             margin: 0;
@@ -606,7 +638,7 @@
             transform: rotate(-45deg);
         }
 
-        .main-header-container .navbar-toggle {
+        .main-header-container .navbar_toggle {
             margin: 0;
             order: 1;
             height: 60px;
@@ -618,13 +650,13 @@
             top: 1px;
         }
 
-        .main-header-container .navbar-toggle.collapsed {
+        .main-header-container .navbar_toggle.collapsed {
             border-color: transparent;
             height: 59px;
             top: 0;
         }
 
-        .main-header-container .navbar-toggle .patty {
+        .main-header-container .navbar_toggle .patty {
             -webkit-transition: all 0.2s ease;
             -o-transition: all 0.2s ease;
             transition: all 0.2s ease;
@@ -639,8 +671,8 @@
             background: black;
         }
 
-        .main-header-container .navbar-toggle .patty:after,
-        .main-header-container .navbar-toggle .patty:before {
+        .main-header-container .navbar_toggle .patty:after,
+        .main-header-container .navbar_toggle .patty:before {
             -webkit-transition: all 0.2s ease;
             -o-transition: all 0.2s ease;
             transition: all 0.2s ease;
@@ -654,19 +686,19 @@
             content: '';
         }
 
-        .main-header-container .navbar-toggle .patty:after {
+        .main-header-container .navbar_toggle .patty:after {
             top: 6px;
         }
 
-        .main-header-container .navbar-toggle .patty:before {
+        .main-header-container .navbar_toggle .patty:before {
             top: -6px;
         }
 
-        .main-header-container .navbar-toggle:not(.collapsed) .patty {
+        .main-header-container .navbar_toggle:not(.collapsed) .patty {
             background: none;
         }
 
-        .main-header-container .navbar-toggle:not(.collapsed) .patty:before {
+        .main-header-container .navbar_toggle:not(.collapsed) .patty:before {
             -webkit-transform: rotate(-45deg);
             -ms-transform: rotate(-45deg);
             -o-transform: rotate(-45deg);
@@ -674,7 +706,7 @@
             top: 0;
         }
 
-        .main-header-container .navbar-toggle:not(.collapsed) .patty:after {
+        .main-header-container .navbar_toggle:not(.collapsed) .patty:after {
             -webkit-transform: rotate(45deg);
             -ms-transform: rotate(45deg);
             -o-transform: rotate(45deg);
