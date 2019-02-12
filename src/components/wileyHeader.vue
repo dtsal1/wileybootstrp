@@ -10,25 +10,37 @@
                             </a>
                         </div>
                     </div>
-                    <span type="button" id="openMenu" @click="menuClick" class="navbar_toggle collapsed visible-xs-inline-block">
+                    <span type="button" id="openMenu"  class="navbar_toggle collapsed visible-xs-inline-block">
+                        <transition name="fade" mode="out-in">
+                            <i class="material-icons menu" v-if="!show" @click="show = !show" key="menu">menu</i>
+                            <i class="material-icons clear" v-else @click="show =!show" key="clear">clear</i>
+                        </transition>
+
                              <!--<span class="patty"></span>-->
                           </span>
+
                     <span class="main-navigation-search-icon icon-search-black visible-xs-inline-block"></span>
 
                 </div>
                 <nav id="main-header-navbar" role="navigation" class="collapse navbar-collapse navbar">
                     <ul id="navigation-menu" class="navigation-menu">
-                        <li class=""><a href="" class="">{{msgProducts}}</a>
+                        <li class=""><a href="" class="">{{menuItems[0]}}</a>
                         </li>
-                        <li class=""><a href="" class="">{{msgWork}}</a>
+                        <li class=""><a href="" class="">{{menuItems[1]}}</a>
                         </li>
-                        <li class=""><a href="" class="">{{msgCompany}}</a>
+                        <li class=""><a href="" class="">{{menuItems[2]}}</a>
                         </li>
-                        <li class=""><a href="" class="">{{msgContact}}</a>
+                        <li class=""><a href="" class="">{{menuItems[3]}}</a>
                         </li>
 
                     </ul>
+
                 </nav>
+                <transition name="fade">
+                    <ul class="mobileMenu" v-if="show">
+                        <li class="mobileMenuItems" v-for="menuItem in menuItems">{{menuItem}}</li>
+                    </ul>
+                </transition>
             </div>
             <app-search></app-search>
            </div>
@@ -41,20 +53,15 @@
         name: "wileyHeader",
         data() {
             return {
-                msgProducts: "продукты",
-                msgWork: "работа в россии",
-                msgCompany: "о компании",
-                msgContact: "связаться с нами"
+                menuItems: ["продукты",'работа в россии','о компании','связаться с нами'],
+                show: false
             }
+
         },
         components: {
             appSearch: search
         },
         methods:{
-            menuClick (e) {
-                e.preventDefault();
-
-            }
 
         }
 
@@ -63,29 +70,52 @@
 </script>
 
 <style scoped>
+    @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+    .mobileMenuItems {
+        align-items: center;
+        color: #414245;
+        cursor: pointer;
+        display: flex;
+        font-size: 1.7em;
+        height: 3em;
+        justify-content: left;
+        list-style-type: none;
+        text-transform: uppercase;
+        transition: all .3s ease;
+        font-family:  'Open Sans',sans-serif;
+        font-weight: 600;
+        /*height: 100%;*/
+        /*box-sizing: border-box;*/
+        /*top: 1px;*/
+        /*display: block;*/
+        /*letter-spacing: 0.27px;*/
+        /*white-space: nowrap;*/
+    }
 
     @font-face {
-        font-family: 'Material Icons';
+        font-family: "Open Sans";
+        src: local("Open Sans");
         font-style: normal;
-        font-weight: 400;
-        src: url(https://fonts.gstatic.com/s/materialicons/v43/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+        font-weight: 500;
+
     }
 
-    .material-icons {
-        font-family: 'Material Icons';
-        font-weight: normal;
-        font-style: normal;
-        font-size: 24px;
-        line-height: 1;
-        letter-spacing: normal;
-        text-transform: none;
-        display: inline-block;
-        white-space: nowrap;
-        word-wrap: normal;
-        direction: ltr;
-        -webkit-font-feature-settings: 'liga';
-        -webkit-font-smoothing: antialiased;
-    }
+    /*.material-icons {*/
+        /*font-family: 'Material Icons';*/
+        /*font-weight: normal;*/
+        /*font-style: normal;*/
+        /*font-size: 24px;*/
+        /*line-height: 1;*/
+        /*letter-spacing: normal;*/
+        /*text-transform: none;*/
+        /*display: inline-block;*/
+        /*white-space: nowrap;*/
+        /*word-wrap: normal;*/
+        /*direction: ltr;*/
+        /*-webkit-font-feature-settings: 'liga';*/
+        /*-webkit-font-smoothing: antialiased;*/
+    /*}*/
     @media (min-width: 641px) {
         .main-header-container .simple-responsive-banner-component {
             margin: 0;
