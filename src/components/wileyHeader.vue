@@ -10,7 +10,7 @@
                             </a>
                         </div>
                     </div>
-                    <span type="button" id="openMenu"  class="navbar_toggle collapsed visible-xs-inline-block">
+                    <span  class="button navbar_toggle collapsed visible-xs-inline-block">
                         <transition name="fade" mode="out-in">
                             <i class="material-icons menu" v-if="!show" @click="show = !show" key="menu">menu</i>
                             <i class="material-icons clear" v-else @click="show =!show" key="clear">clear</i>
@@ -70,53 +70,68 @@
 </script>
 
 <style scoped>
-    @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-
-    .mobileMenuItems {
-        align-items: center;
-        color: #414245;
-        cursor: pointer;
-        display: flex;
-        font-size: 1.7em;
-        height: 3em;
-        justify-content: left;
-        list-style-type: none;
-        text-transform: uppercase;
-        transition: all .3s ease;
-        font-family:  'Open Sans',sans-serif;
-        font-weight: 600;
-        /*height: 100%;*/
-        /*box-sizing: border-box;*/
-        /*top: 1px;*/
-        /*display: block;*/
-        /*letter-spacing: 0.27px;*/
-        /*white-space: nowrap;*/
-    }
-
+    /*@import url("https://fonts.googleapis.com/icon?family=Material+Icons");*/
+.button {
+    border: none;
+}
+    /* fallback */
     @font-face {
-        font-family: "Open Sans";
-        src: local("Open Sans");
+        font-family: 'Material Icons';
         font-style: normal;
-        font-weight: 500;
-
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/materialicons/v43/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
     }
 
-    /*.material-icons {*/
-        /*font-family: 'Material Icons';*/
-        /*font-weight: normal;*/
-        /*font-style: normal;*/
-        /*font-size: 24px;*/
-        /*line-height: 1;*/
-        /*letter-spacing: normal;*/
-        /*text-transform: none;*/
-        /*display: inline-block;*/
-        /*white-space: nowrap;*/
-        /*word-wrap: normal;*/
-        /*direction: ltr;*/
-        /*-webkit-font-feature-settings: 'liga';*/
-        /*-webkit-font-smoothing: antialiased;*/
-    /*}*/
+    .material-icons {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 2.4;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+    }
+    @media (max-width: 641px) {
+        .mobileMenuItems {
+            align-items: center;
+            color: #414245;
+            cursor: pointer;
+            display: flex;
+            font-size: 1.7em;
+            height: 3em;
+            justify-content: left;
+            list-style-type: none;
+            text-transform: uppercase;
+            transition: all .3s ease;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+
+            box-sizing: border-box;
+            top: 1px;
+
+            letter-spacing: 0.7px;
+            white-space: nowrap;
+        }
+
+        @font-face {
+            font-family: "Open Sans";
+            src: local("Open Sans");
+            font-style: normal;
+            font-weight: 500;
+
+        }
+    }
+
     @media (min-width: 641px) {
+        .mobileMenuItems {
+            display: none;
+        }
         .main-header-container .simple-responsive-banner-component {
             margin: 0;
         }
@@ -307,6 +322,9 @@
         }
     }
     @media (max-width: 846px) {
+        .mobileMenuItems {
+
+        }
         .navigation-menu{
             margin: 0;
             padding: 0;
@@ -673,17 +691,23 @@
             order: 1;
             height: 60px;
             line-height: 60px;
-            border-left: 1px solid #dddedf;
+            border-left: 0px solid #dddedf;
+            outline: none;
             background-color: white;
             padding: 0 10px;
             box-sizing: border-box;
             top: 1px;
         }
 
+        .main-header-container. navbar-toggle:focus {
+            outline: 0;
+        }
+
         .main-header-container .navbar_toggle.collapsed {
             border-color: transparent;
             height: 59px;
             top: 0;
+            outline: none;
         }
 
         .main-header-container .navbar_toggle .patty {
