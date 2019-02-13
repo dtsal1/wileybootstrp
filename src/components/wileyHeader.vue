@@ -97,6 +97,41 @@
         -webkit-font-feature-settings: 'liga';
         -webkit-font-smoothing: antialiased;
     }
+
+
+    .main-header-container {
+        font-family: 'Open Sans', sans-serif;
+        position: relative;
+        font-size: 10px;
+        margin-bottom: 0;
+        height: 156px;
+        z-index: 1000;
+    }
+
+    .main-header-container a:focus,
+    .main-header-container a:hover {
+        color: inherit;
+    }
+
+    .main-header-container .main-navigation-search .input-group .main-navigation-search-input {
+        width: 100%;
+        height: 48px;
+        padding: 0 14px;
+        font-size: 1.6em;
+        background: none;
+        box-shadow: none;
+        border: 1px solid #c2c3c6;
+        border-right: none;
+    }
+
+    .main-header-container .main-navigation-search .input-group .main-navigation-search-input::placeholder {
+        color: #d8d9da;
+    }
+
+    .main-header-container .main-navigation-search .input-group .main-navigation-search-input::-ms-clear {
+        display: none;
+    }
+    /* Mobile Menu Items */
     @media (max-width: 641px) {
         .mobileMenuItems {
             align-items: center;
@@ -768,4 +803,7 @@
             top: 0;
         }
     }
+
+
+
 </style>
