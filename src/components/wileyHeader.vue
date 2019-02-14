@@ -12,8 +12,8 @@
                     </div>
                     <span  class="button navbar_toggle collapsed visible-xs-inline-block">
                         <transition name="fade" mode="out-in">
-                            <i class="material-icons menu" v-if="!showMenu" @click="showMenu = !showMenu" key="menu">menu</i>
-                            <i class="material-icons clear" v-else @click="showMenu =!showMenu" key="clear">clear</i>
+                            <i class="material-icons menu" v-if="!showMenu" @click="showIcons" key="menu">{{keys[0]}}</i>
+                            <i class="material-icons clear" v-else @click="showIcons" key="clear">{{keys[1]}}</i>
                         </transition>
                     </span>
 
@@ -21,6 +21,7 @@
                         <transition name="fade" mode="out-in">
                             <i class="material-icons search" v-if="!showSearch" @click="showSearch = !showSearch" key="search">search</i>
                             <i class="material-icons clear" v-else @click="showSearch = !showSearch" key="clear">clear</i>
+
                         </transition>
                      </span>
 
@@ -54,11 +55,12 @@
     import search from "./search.vue"
     export default {
         name: "wileyHeader",
-        data() {
+        data: function (){
             return {
                 menuItems: ["продукты",'работа в россии','о компании','связаться с нами'],
                 showMenu: false,
-                showSearch: false
+                showSearch: false,
+                keys:["menu","clear","search"]
             }
 
         },
@@ -66,7 +68,9 @@
             appSearch: search
         },
         methods:{
-
+            showIcons(e) {
+               this.showMenu = !this.showMenu
+            }
         }
 
 
@@ -90,7 +94,7 @@
         font-family: 'Material Icons';
         font-weight: normal;
         font-style: normal;
-        font-size: 24px;
+        font-size: 26px;
         line-height: 2.4;
         letter-spacing: normal;
         text-transform: none;
