@@ -12,14 +12,17 @@
                     </div>
                     <span  class="button navbar_toggle collapsed visible-xs-inline-block">
                         <transition name="fade" mode="out-in">
-                            <i class="material-icons menu" v-if="!show" @click="show = !show" key="menu">menu</i>
-                            <i class="material-icons clear" v-else @click="show =!show" key="clear">clear</i>
+                            <i class="material-icons menu" v-if="!showMenu" @click="showMenu = !showMenu" key="menu">menu</i>
+                            <i class="material-icons clear" v-else @click="showMenu =!showMenu" key="clear">clear</i>
                         </transition>
+                    </span>
 
-                             <!--<span class="patty"></span>-->
-                          </span>
-
-                    <span class="main-navigation-search-icon icon-search-black visible-xs-inline-block"></span>
+                    <span class="main-navigation-search-icon  visible-xs-inline-block">
+                        <transition name="fade" mode="out-in">
+                            <i class="material-icons search" v-if="!showSearch" @click="showSearch = !showSearch" key="search">search</i>
+                            <i class="material-icons clear" v-else @click="showSearch = !showSearch" key="clear">clear</i>
+                        </transition>
+                     </span>
 
                 </div>
                 <nav id="main-header-navbar" role="navigation" class="collapse navbar-collapse navbar">
@@ -37,7 +40,7 @@
 
                 </nav>
                 <transition name="fade">
-                    <ul class="mobileMenu" v-if="show">
+                    <ul class="mobileMenu" v-if="showMenu">
                         <li class="mobileMenuItems" v-for="menuItem in menuItems">{{menuItem}}</li>
                     </ul>
                 </transition>
@@ -54,7 +57,8 @@
         data() {
             return {
                 menuItems: ["продукты",'работа в россии','о компании','связаться с нами'],
-                show: false
+                showMenu: false,
+                showSearch: false
             }
 
         },
@@ -97,6 +101,8 @@
         -webkit-font-feature-settings: 'liga';
         -webkit-font-smoothing: antialiased;
     }
+
+
 
 
     .main-header-container {
