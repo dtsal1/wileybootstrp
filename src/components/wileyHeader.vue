@@ -11,14 +11,14 @@
                         </div>
                     </div>
                     <span  class="button navbar_toggle collapsed visible-xs-inline-block">
-                        <transition name="fade" mode="out-in">
+                        <transition name="fade_menu" mode="out-in">
                             <i id="iconMenu" class="material-icons menu" v-if="showMenu" @click="showIcons" key="menu">{{keys[0]}}</i>
                             <i id="iconMenuClose" class="material-icons clear" v-else @click="showIcons" key="clear">{{keys[1]}}</i>
                         </transition>
                     </span>
 
                     <span class="main-navigation-search-icon  visible-xs-inline-block">
-                        <transition name="fade" mode="out-in">
+                        <transition name="fade_search" mode="out-in">
                             <i id="iconSearch" class="material-icons search" v-if="showSearch" @click="showIcons" key="search">{{keys[2]}}</i>
                             <i id ="iconSearchClose" class="material-icons clear" v-else @click="showIcons" key="clear">{{keys[1]}}</i>
 
@@ -91,7 +91,13 @@
 </script>
 
 <style scoped>
-    /*@import url("https://fonts.googleapis.com/icon?family=Material+Icons");*/
+
+    /*.fade_menu-enter-active, .fade_menu-leave-active {*/
+        /*transition: opacity .5s;*/
+    /*}*/
+    /*.fadeMenu-enter, .fadeMenu-leave-to !* .fade-leave-active до версии 2.1.8 *! {*/
+        /*opacity: 0;*/
+    /*}*/
 .button {
     border: none;
 }
