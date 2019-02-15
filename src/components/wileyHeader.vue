@@ -12,15 +12,15 @@
                     </div>
                     <span  class="button navbar_toggle collapsed visible-xs-inline-block">
                         <transition name="fade" mode="out-in">
-                            <i class="material-icons menu" v-if="!showMenu" @click="showIcons" key="menu">{{keys[0]}}</i>
-                            <i class="material-icons clear" v-else @click="showIcons" key="clear">{{keys[1]}}</i>
+                            <i id="iconMenu" class="material-icons menu" v-if="showMenu" @click="showIcons" key="menu">{{keys[0]}}</i>
+                            <i id="iconMenuClose" class="material-icons clear" v-else @click="showIcons" key="clear">{{keys[1]}}</i>
                         </transition>
                     </span>
 
                     <span class="main-navigation-search-icon  visible-xs-inline-block">
                         <transition name="fade" mode="out-in">
-                            <i class="material-icons search" v-if="!showSearch" @click="showSearch = !showSearch" key="search">search</i>
-                            <i class="material-icons clear" v-else @click="showSearch = !showSearch" key="clear">clear</i>
+                            <i id="iconSearch" class="material-icons search" v-if="showSearch" @click="showIcons" key="search">{{keys[2]}}</i>
+                            <i id ="iconSearchClose" class="material-icons clear" v-else @click="showIcons" key="clear">{{keys[1]}}</i>
 
                         </transition>
                      </span>
@@ -41,7 +41,7 @@
 
                 </nav>
                 <transition name="fade">
-                    <ul class="mobileMenu" v-if="showMenu">
+                    <ul class="mobileMenu" v-if="!showMenu">
                         <li class="mobileMenuItems" v-for="menuItem in menuItems">{{menuItem}}</li>
                     </ul>
                 </transition>
@@ -58,9 +58,10 @@
         data: function (){
             return {
                 menuItems: ["продукты",'работа в россии','о компании','связаться с нами'],
-                showMenu: false,
-                showSearch: false,
-                keys:["menu","clear","search"]
+                showMenu: true,
+                showSearch: true,
+                keys:["menu","clear","search"],
+
             }
 
         },
@@ -69,7 +70,19 @@
         },
         methods:{
             showIcons(e) {
-               this.showMenu = !this.showMenu
+               if ((e.currentTarget.id == "iconMenu") || (e.currentTarget.id == "iconMenuClose")) {
+                   this.showMenu = !this.showMenu;
+                   if (this.showSearch == false) {
+                       this.showSearch=!this.showSearch;
+                   }
+               }
+               else if ((e.currentTarget.id == "iconSearch") ||  (e.currentTarget.id == "iconSearchClose")) {
+                   this.showSearch =!this.showSearch;
+                   if (this.showMenu == false)
+                   {this.showMenu = !this.showMenu};
+                }
+
+
             }
         }
 
