@@ -46,7 +46,7 @@
                     </ul>
                 </transition>
             </div>
-            <app-search></app-search>
+            <app-search v-bind:searchIconState ='showSearch'></app-search>
            </div>
     </header>
 </template>

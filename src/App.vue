@@ -673,7 +673,7 @@ main {
 /*}*/
 
 .main-header-container .main-sticky-header {
-    background: darkgrey;
+    background: #7b7b7b;
     padding: 0;
     position: fixed;
     width: 100%;
