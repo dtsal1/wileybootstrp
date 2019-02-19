@@ -1,55 +1,53 @@
 <template>
     <div>
-    <div class="main-navigation-search" v-bind:style="{top: width_panel}">
-        <div class="container">
-            <form name="search_form_SearchBox" method="get" action="https://www.wiley.com/en-gb/search">
-                <div class="input-group">
-                    <input type="search" id="js-site-search-input" aria-label="site search" class="form-control main-navigation-search-input js-site-search-input ui-autocomplete-input"  name="pq" value="" maxlength="100" placeholder="Поиск по названию, автору, ключевому слову или ISBN"  data-options="{&quot;autocompleteUrl&quot; : &quot;/en-gb/search/autocomplete/SearchBox&quot;,&quot;minCharactersBeforeRequest&quot; : &quot;3&quot;,&quot;waitTimeBeforeRequest&quot; : &quot;500&quot;,&quot;displayProductImages&quot; : false}" autocomplete="off">
-                    <span class="input-group-btn">
-                            <button type="submit" class="glyphicon glyphicon-search">Search</button>
-                        </span>
-                </div>
-                <!--<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;">-->
+        <div class="main-navigation-search" v-bind:style="{top: windowWidth <= 640 ? topPanel : ''}"  >
+            <div class="container">
+                <form name="search_form_SearchBox" method="get" action="https://www.wiley.com/en-gb/search">
 
-                <!--</ul>-->
-            </form>
+                    <div class="input-group">
+                        <input type="search" id="js-site-search-input" aria-label="site search" class="form-control main-navigation-search-input js-site-search-input ui-autocomplete-input"  name="pq" value="" maxlength="100" placeholder="Поиск по названию, автору, ключевому слову или ISBN"  data-options="{&quot;autocompleteUrl&quot; : &quot;/en-gb/search/autocomplete/SearchBox&quot;,&quot;minCharactersBeforeRequest&quot; : &quot;3&quot;,&quot;waitTimeBeforeRequest&quot; : &quot;500&quot;,&quot;displayProductImages&quot; : false}" autocomplete="off">
+                        <span class="input-group-btn">
+                                <button type="submit" class="glyphicon glyphicon-search">Search</button>
+                            </span>
+                    </div>
+
+                    <!--<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;">-->
+
+                    <!--</ul>-->
+                </form>
+
+            </div>
+
+
+            <!--<div class="box">-->
+                <!--<div class="container-2">-->
+                    <!--<span class="icon"><i class="fa fa-search"></i></span>-->
+                    <!--<input type="search" id="search" placeholder="Поиск..." />-->
+                <!--</div>-->
+            <!--</div>-->
 
         </div>
 
-
-        <!--<div class="box">-->
-            <!--<div class="container-2">-->
-                <!--<span class="icon"><i class="fa fa-search"></i></span>-->
-                <!--<input type="search" id="search" placeholder="Поиск..." />-->
-            <!--</div>-->
-        <!--</div>-->
-    </div>
-    <button @click="checkIconStateMethod">Search State</button>
     </div>
 </template>
 
 <script>
     export default {
+        props : ['topPanel','windowWidth','IconState'],
         name: "search",
-        props: ['searchIconState'],
         data: function() {
             return {
-                width_panel: '-60px'
+
             }
         },
         methods: {
-            checkIconStateMethod () {
-
-                if (this.searchIconState == true) {
-                 console.log('Search Icon Status =' + this.searchIconState)
-                 this.width_panel= '60px'
-                }
-            }
         }
     }
 </script>
 
 <style scoped>
+
+
     .input-group-addon,
     .input-group-btn,
     .input-group .form-control {
@@ -215,12 +213,12 @@
 
         .main-header-container .main-navigation-search {
             position: fixed;
-            /*top: 60px;*/
+            top: -60px;
             width: 100%;
             height: 52px;
             padding: 0;
             box-sizing: border-box;
-            transition: all 0.8s ease-out;
+            transition: all 0.5s ease-out;
             -webkit-box-shadow: 0 10px 10px 0 rgba(67, 99, 125, 0.11);
             -moz-box-shadow: 0 10px 10px 0 rgba(67, 99, 125, 0.11);
             box-shadow: 0 10px 10px 0 rgba(67, 99, 125, 0.11);

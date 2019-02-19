@@ -46,7 +46,7 @@
                     </ul>
                 </transition>
             </div>
-            <app-search v-bind:searchIconState ='showSearch'></app-search>
+            <app-search v-bind:windowWidth = "searchWindowWidth" v-bind:topPanel ="searchTopPanel" :IconState="searchIconState"></app-search>
            </div>
     </header>
 </template>
@@ -61,8 +61,18 @@
                 showMenu: true,
                 showSearch: true,
                 keys:["menu","clear","search"],
+                searchWindowWidth: window.innerWidth,
+                searchTopPanel: '',
+                searchIconState: true
 
             }
+
+        },
+        mounted () {
+            window.onresize = (event) => {
+                this.searchWindowWidth = window.innerWidth;
+
+            };
 
         },
         components: {
@@ -70,21 +80,47 @@
         },
         methods:{
             showIcons(e) {
-               if ((e.currentTarget.id == "iconMenu") || (e.currentTarget.id == "iconMenuClose")) {
-                   this.showMenu = !this.showMenu;
-                   if (this.showSearch == false) {
+
+               switch (e.currentTarget.id) {
+                   case "iconMenu": {
+                       this.showMenu = !this.showMenu
+                       if (this.showSearch == false) {
+                           this.showSearch = !this.showSearch
+                           if (this.searchWindowWidth <= 640) {
+                               this.searchTopPanel = ''
+                           }
+                       }
+                   };
+                   break;
+                   case "iconMenuClose": {this.showMenu = !this.showMenu};
+                   break;
+                   case "iconSearch" :
+                   {
                        this.showSearch=!this.showSearch;
+                       //change top of search panel to show
+                       if (this.searchWindowWidth <= 640){
+                                    this.searchTopPanel = '60px'
+                       }
+                       if (this.showMenu == false) {
+                           this.showMenu = !this.showMenu
+                       };
+
                    }
+                   break;
+                   case "iconSearchClose" :
+                       this.showSearch=!this.showSearch;
+                       if (this.searchWindowWidth <= 640) {
+                           this.searchTopPanel = ''
+                       }
+                   break;
+
+
                }
-               else if ((e.currentTarget.id == "iconSearch") ||  (e.currentTarget.id == "iconSearchClose")) {
-                   this.showSearch =!this.showSearch;
-                   if (this.showMenu == false)
-                   {this.showMenu = !this.showMenu};
-                }
-
-
             }
-        }
+
+
+            },
+
 
 
     }
@@ -92,12 +128,7 @@
 
 <style scoped>
 
-    /*.fade_menu-enter-active, .fade_menu-leave-active {*/
-        /*transition: opacity .5s;*/
-    /*}*/
-    /*.fadeMenu-enter, .fadeMenu-leave-to !* .fade-leave-active до версии 2.1.8 *! {*/
-        /*opacity: 0;*/
-    /*}*/
+
 .button {
     border: none;
 }
