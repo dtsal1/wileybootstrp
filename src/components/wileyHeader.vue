@@ -279,7 +279,7 @@
     }
     @media (min-width: 641px) {
         .navigation-menu{
-            margin: 0;
+            margin: 70px;
             padding: 0;
             list-style: none;
             display: flex;

@@ -2,6 +2,7 @@
   <div id="app">
 
       <app-header></app-header>
+      <app-footer></app-footer>
 
   </div>
 
@@ -10,6 +11,7 @@
 
 <script>
 import wileyHeader from "./components/wileyHeader.vue"
+import wileyFooter from "./components/wileyFooter";
 
 
 export default {
@@ -20,7 +22,8 @@ export default {
     }
   },
     components: {
-        appHeader: wileyHeader
+        appHeader: wileyHeader,
+        appFooter: wileyFooter
 
     }
 }
