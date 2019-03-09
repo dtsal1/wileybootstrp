@@ -1,81 +1,86 @@
 <template>
     <div class="hero-banner">
-        <div class="simple-responsive-banner-component hero-banner-component">
-            <div class="carousel-default">
-                <div class="carousel-gallery">
-                    <div class="carousel">
-                        <div class="owl-carousel hero-banner-carousel owl-loaded owl-drag" data-component-model="{&quot;items&quot;:1,&quot;loop&quot;:true,&quot;center&quot;:true,&quot;nav&quot;:true,&quot;navText&quot;:&quot;&quot;,&quot;dots&quot;:true}" style="padding: 0px;">
+        <app-slides></app-slides>
+        <!--<div class="simple-responsive-banner-component hero-banner-component">-->
+            <!--<div class="carousel-default">-->
+                <!--<div class="carousel-gallery">-->
+                    <!--<div class="carousel">-->
+                        <!--<div class="owl-carousel hero-banner-carousel owl-loaded owl-drag" data-component-model="{&quot;items&quot;:1,&quot;loop&quot;:true,&quot;center&quot;:true,&quot;nav&quot;:true,&quot;navText&quot;:&quot;&quot;,&quot;dots&quot;:true}" style="padding: 0px;">-->
 
-                            <div class="owl-stage-outer">
-                                <div class="owl-stage" style="transition: all 0s ease 0s; width: 6995px; transform: translate3d(-2798px, 0px, 0px);"><div class="owl-item cloned" style="width: 1399px; background-image: url(../assets/Telescope_desktop.jpg);">
-                                    <div class="item">
-                                <div class="item-inner ">
-                                    <div class="simple-responsive-banner-component">
-                                        <img class="responsive-image js-responsive-image" alt="Telescope-mobile.jpg" title="Telescope-mobile.jpg" src="../assets/Telescope_desktop.jpg" style="display: none;">
-                                    </div>
-                                    <div class="container">
-                                        <article class="page-section">
-                                            <div class="wiley-slogan"><div class="banner-heading">Building a Better Future</div><p class="banner-heading-text">Through Education, Skill Development and Research</p></div>
-                                            <a href="https://www.wiley.com/en-ru/aboutus" class="link-button transparent" title="Learn more">Learn more</a></article>
-                                    </div>
-                                </div>
-                            </div>
-                            </div><div class="owl-item cloned" style="width: 1399px; background-image: url(../assets/Telescope_desktop.jpg);"><div class="item">
-                                <div class="item-inner ">
-                                    <div class="simple-responsive-banner-component">
-                                        <img class="responsive-image js-responsive-image" alt="Telescope-mobile.jpg" title="Telescope-mobile.jpg" src="../assets/Telescope_desktop.jpg" style="display: none;">
-                                    </div>
-                                    <div class="container">
-                                        <article class="page-section">
-                                            <div class="wiley-slogan"><div class="banner-heading">Building a Better Future</div><p class="banner-heading-text">Through Education, Skill Development and Research</p></div>
-                                            <a href="https://www.wiley.com/en-ru/aboutus" class="link-button transparent" title="Learn more">Learn more</a></article>
-                                    </div>
-                                </div>
-                            </div></div><div class="owl-item active center" style="width: 1399px; background-image: url(../assets/Telescope_desktop.jpg);"><div class="item">
-                                <div class="item-inner ">
-                                    <div class="simple-responsive-banner-component">
-                                        <img class="responsive-image js-responsive-image" alt="Telescope-mobile.jpg" title="Telescope-mobile.jpg" src="../assets/Telescope_desktop.jpg" style="display: none;">
-                                    </div>
-                                    <div class="container">
-                                        <article class="page-section">
-                                            <div class="wiley-slogan"><div class="banner-heading">Building a Better Future</div><p class="banner-heading-text">Through Education, Skill Development and Research</p></div>
-                                            <a href="https://www.wiley.com/en-ru/aboutus" class="link-button transparent" title="Learn more">Learn more</a></article>
-                                    </div>
-                                </div>
-                            </div></div><div class="owl-item cloned" style="width: 1399px; background-image: url(../assets/Telescope_desktop.jpg);"><div class="item">
-                                <div class="item-inner ">
-                                    <div class="simple-responsive-banner-component">
-                                        <img class="responsive-image js-responsive-image" alt="Telescope-mobile.jpg" title="Telescope-mobile.jpg" src="../assets/Telescope_desktop.jpg" style="display: none;">
-                                    </div>
-                                    <div class="container">
-                                        <article class="page-section">
-                                            <div class="wiley-slogan"><div class="banner-heading">Building a Better Future</div><p class="banner-heading-text">Through Education, Skill Development and Research</p></div>
-                                            <a href="https://www.wiley.com/en-ru/aboutus" class="link-button transparent" title="Learn more">Learn more</a></article>
-                                    </div>
-                                </div>
-                            </div></div><div class="owl-item cloned" style="width: 1399px; background-image: url(../assets/Telescope_desktop.jpg);"><div class="item">
-                                <div class="item-inner ">
-                                    <div class="simple-responsive-banner-component">
-                                        <img class="responsive-image js-responsive-image" alt="Telescope-mobile.jpg" title="Telescope-mobile.jpg" src="../assets/Telescope_desktop.jpg" style="display: none;">
-                                    </div>
-                                    <div class="container">
-                                        <article class="page-section">
-                                            <div class="wiley-slogan"><div class="banner-heading">Building a Better Future</div><p class="banner-heading-text">Through Education, Skill Development and Research</p></div>
-                                            <a href="https://www.wiley.com/en-ru/aboutus" class="link-button transparent" title="Learn more">Learn more</a></article>
-                                    </div>
-                                </div>
-                            </div></div></div></div><div class="owl-nav disabled"><a tabindex="0" class="owl-prev"></a><a tabindex="0" class="owl-next"></a></div><div class="owl-dots disabled"><div class="owl-dot active"><span></span></div></div></div>
-                    </div>
-                </div>
-            </div></div>
-        <div class="container">
-        </div>
+                            <!--<div class="owl-stage-outer">-->
+                                <!--<div class="owl-stage" style="transition: all 0s ease 0s; width: 6995px; transform: translate3d(-2798px, 0px, 0px);"><div class="owl-item cloned" style="width: 1399px; background-image: url(../assets/Telescope_desktop.jpg);">-->
+                                    <!--<div class="item">-->
+                                <!--<div class="item-inner ">-->
+                                    <!--<div class="simple-responsive-banner-component">-->
+                                        <!--<img class="responsive-image js-responsive-image" alt="Telescope-mobile.jpg" title="Telescope-mobile.jpg" src="../assets/Telescope_desktop.jpg" style="display: none;">-->
+                                    <!--</div>-->
+                                    <!--<div class="container">-->
+                                        <!--<article class="page-section">-->
+                                            <!--<div class="wiley-slogan"><div class="banner-heading">Building a Better Future</div><p class="banner-heading-text">Through Education, Skill Development and Research</p></div>-->
+                                            <!--<a href="https://www.wiley.com/en-ru/aboutus" class="link-button transparent" title="Learn more">Learn more</a></article>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--</div><div class="owl-item cloned" style="width: 1399px; background-image: url(../assets/Telescope_desktop.jpg);"><div class="item">-->
+                                <!--<div class="item-inner ">-->
+                                    <!--<div class="simple-responsive-banner-component">-->
+                                        <!--<img class="responsive-image js-responsive-image" alt="Telescope-mobile.jpg" title="Telescope-mobile.jpg" src="../assets/Telescope_desktop.jpg" style="display: none;">-->
+                                    <!--</div>-->
+                                    <!--<div class="container">-->
+                                        <!--<article class="page-section">-->
+                                            <!--<div class="wiley-slogan"><div class="banner-heading">Building a Better Future</div><p class="banner-heading-text">Through Education, Skill Development and Research</p></div>-->
+                                            <!--<a href="https://www.wiley.com/en-ru/aboutus" class="link-button transparent" title="Learn more">Learn more</a></article>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div></div><div class="owl-item active center" style="width: 1399px; background-image: url(../assets/Telescope_desktop.jpg);"><div class="item">-->
+                                <!--<div class="item-inner ">-->
+                                    <!--<div class="simple-responsive-banner-component">-->
+                                        <!--<img class="responsive-image js-responsive-image" alt="Telescope-mobile.jpg" title="Telescope-mobile.jpg" src="../assets/Telescope_desktop.jpg" style="display: none;">-->
+                                    <!--</div>-->
+                                    <!--<div class="container">-->
+                                        <!--<article class="page-section">-->
+                                            <!--<div class="wiley-slogan"><div class="banner-heading">Building a Better Future</div><p class="banner-heading-text">Through Education, Skill Development and Research</p></div>-->
+                                            <!--<a href="https://www.wiley.com/en-ru/aboutus" class="link-button transparent" title="Learn more">Learn more</a></article>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div></div><div class="owl-item cloned" style="width: 1399px; background-image: url(../assets/Telescope_desktop.jpg);"><div class="item">-->
+                                <!--<div class="item-inner ">-->
+                                    <!--<div class="simple-responsive-banner-component">-->
+                                        <!--<img class="responsive-image js-responsive-image" alt="Telescope-mobile.jpg" title="Telescope-mobile.jpg" src="../assets/Telescope_desktop.jpg" style="display: none;">-->
+                                    <!--</div>-->
+                                    <!--<div class="container">-->
+                                        <!--<article class="page-section">-->
+                                            <!--<div class="wiley-slogan"><div class="banner-heading">Building a Better Future</div><p class="banner-heading-text">Through Education, Skill Development and Research</p></div>-->
+                                            <!--<a href="https://www.wiley.com/en-ru/aboutus" class="link-button transparent" title="Learn more">Learn more</a></article>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div></div><div class="owl-item cloned" style="width: 1399px; background-image: url(../assets/Telescope_desktop.jpg);"><div class="item">-->
+                                <!--<div class="item-inner ">-->
+                                    <!--<div class="simple-responsive-banner-component">-->
+                                        <!--<img class="responsive-image js-responsive-image" alt="Telescope-mobile.jpg" title="Telescope-mobile.jpg" src="../assets/Telescope_desktop.jpg" style="display: none;">-->
+                                    <!--</div>-->
+                                    <!--<div class="container">-->
+                                        <!--<article class="page-section">-->
+                                            <!--<div class="wiley-slogan"><div class="banner-heading">Building a Better Future</div><p class="banner-heading-text">Through Education, Skill Development and Research</p></div>-->
+                                            <!--<a href="https://www.wiley.com/en-ru/aboutus" class="link-button transparent" title="Learn more">Learn more</a></article>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div></div></div></div><div class="owl-nav disabled"><a tabindex="0" class="owl-prev"></a><a tabindex="0" class="owl-next"></a></div><div class="owl-dots disabled"><div class="owl-dot active"><span></span></div></div></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div></div>-->
+        <!--<div class="container">-->
+        <!--</div>-->
     </div>
 </template>
 
 <script>
+    import slides from "./slides"
     export default {
-        name: "wileyBody"
+        name: "wileyBody",
+     components: {
+        appSlides: slides
+     }
     }
 </script>
 
